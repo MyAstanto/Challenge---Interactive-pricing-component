@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Poppins:wght@300&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Range slider - Bedimcode</title>
+  </head>
+  <style>
+    div.dollar {
+      font-family: "Roboto", sans-serif;
+      font-size: 45px;
+      color: hsl(227, 35%, 25%);
+    }
+  </style>
+  <body>
+    <div class="judul">
+      <div class="circle">
+        <img src="images\pattern-circles.svg" />
+      </div>
+      <h1>Simple, traffic-based pricing</h1>
+      <h5>Sign-up for our 30-day trial. No credit card required.</h5>
+    </div>
+    <div class="box">
+      <div class="g-cont">
+        <div><span id="page"></span></div>
+        <div>PAGEVIEWS</div>
+        <div class="dollar"><output type="number" id="rego"></output></div>
+        <div style="position: relative; top: 0; left: 25px">/<span id="mode">month</span></div>
+      </div>
+      <div class="container">
+        <div class="range">
+          <div class="range__content">
+            <div class="range__slider">
+              <div class="range__slider-line" id="range-line"></div>
+            </div>
+
+            <div class="range__thumb" id="range-thumb">
+              <div class="range__value">
+                <span class="range__value-number" id="range-number"></span>
+              </div>
+            </div>
+
+            <input type="range" class="range__input" id="range-input" min="0" value="0" max="4" step="1" />
+          </div>
+        </div>
+        <div class="footer">
+          <div class="toogle">
+            <p>Monthly Billing</p>
+            <input onclick="myFunction()" type="checkbox" id="switch" />
+            <label for="switch"></label>
+            <p>Yearly Billing</p>
+            <p type="discount">25% dicount</p>
+          </div>
+
+          <div class="footer2">
+            <div class="text">
+              <p><img src="images/icon-check.svg" alt="icon-check" />Unlimited websites</p>
+              <p><img src="images/icon-check.svg" alt="icon-check" />100% data ownership</p>
+              <p><img src="images/icon-check.svg" alt="icon-check" />Email reports</p>
+            </div>
+            <div class="button">
+              <button type="button" onclick="window.location='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Start my trial</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=============== MAIN JS ===============-->
+    <script src="index.js"></script>
+  </body>
+</html>

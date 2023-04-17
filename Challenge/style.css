@@ -1,0 +1,329 @@
+/*=============== GOOGLE FONTS ===============*/
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"); */
+
+/*=============== VARIABLES CSS ===============*/
+/* :root { */
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+/* --gradient-color: linear-gradient(95deg, hsl(286, 97%, 57%) -7%, hsl(256, 84%, 48%) 112%);
+  --first-color-light: hsl(256, 64%, 88%);
+  --first-color-lighten: hsl(256, 58%, 94%);
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(256, 100%, 98%); */
+
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+/* --body-font: "Montserrat", sans-serif; */
+/* --h1-font-size: 1.5rem; */
+/* } */
+
+/*=============== BASE ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url("images/bg-pattern.svg") no-repeat;
+  background-size: 1440px 350px;
+  background-color: hsl(230, 100%, 99%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Judul START */
+
+.judul {
+  text-align: center;
+  padding: 50px 0px 0px 0px;
+}
+.judul h1 {
+  font-family: "Manrope", sans-serif;
+  color: hsl(227, 35%, 25%);
+  font-size: 25px;
+}
+.judul h5 {
+  color: hsl(225, 20%, 60%);
+  font-size: 13px;
+  line-height: 3;
+}
+.judul img {
+  position: relative;
+  bottom: 10px;
+  left: 111px;
+  width: 125px;
+  z-index: -1;
+}
+.circle {
+  width: 10px;
+  height: 20px;
+}
+/* Judul END */
+
+.box {
+  position: relative;
+
+  top: 60px;
+
+  /* Set ukuran box putih */
+  height: 350px;
+  width: 500px;
+
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Set tulisan harga pageviews */
+.g-cont {
+  position: relative;
+  display: grid;
+  grid-template-columns: 35px 140px 127px 50px;
+  gap: 5px;
+  color: hsl(225, 20%, 60%);
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  /* Set posisi */
+  padding: 10px;
+  margin: 30px 45px 30px 45px;
+
+  align-items: center;
+}
+
+/* Elemen Harga & Pagevews */
+#money {
+  font-weight: 1000px;
+}
+
+.dollar {
+  justify-self: end;
+}
+
+#rego {
+  font-family: "Manrope", sans-serif;
+  position: relative;
+  color: hsl(227, 35%, 25%);
+  font-weight: bolder;
+  font-size: 35px;
+  left: 23px;
+  bottom: 4px;
+  letter-spacing: -1px;
+}
+
+#mode {
+  color: hsl(225, 20%, 60%);
+}
+
+/*=============== RANGE SLIDER START ===============*/
+.container {
+  display: grid;
+  place-items: center;
+}
+
+/* Custom input range */
+.range {
+  height: 6px;
+  width: 100%;
+  /* max-width: 332px; */
+  /* background-color: var(--first-color-light); */
+  border-radius: 4px;
+  /* box-shadow: 0 6px 16px hsla(256, 72%, 24%, 0.15); */
+  padding-inline: 2.5rem;
+  display: grid;
+}
+
+.range__content {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.range__slider {
+  width: 92%;
+  height: 8px;
+  background-color: hsl(256, 58%, 94%);
+  border-radius: 4rem;
+  /* box-shadow: 0 4px 12px hsla(256, 72%, 24%, 0.2); */
+  overflow: hidden;
+}
+
+.range__slider-line {
+  width: 100%;
+  height: 100%;
+  background: hsl(174, 77%, 80%);
+  width: 0;
+}
+
+.range__thumb {
+  width: 35px;
+  height: 35px;
+  background: hsl(174, 86%, 45%) url(images/icon-slider.svg) no-repeat center center;
+  border-radius: 50%;
+  box-shadow: 0 0 12px hsla(256, 72%, 24%, 0.2);
+  position: absolute;
+}
+
+/* Value input range */
+.range__value-number {
+  opacity: 0;
+}
+
+/* Default input range */
+.range__input {
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  position: absolute;
+  opacity: 0;
+}
+
+.range__input::-webkit-slider-thumb {
+  appearance: none;
+  width: 32px;
+  height: 32px;
+}
+
+.range__input::-webkit-slider-thumb:hover {
+  cursor: pointer;
+  /* box-shadow: 0 0 0 100px #888888; */
+}
+/*=============== RANGE SLIDER END ===============*/
+
+/* Footer START */
+.footer {
+  position: relative;
+  top: 150px;
+  letter-spacing: 0.5px;
+}
+.price p {
+  color: hsl(225, 20%, 60%);
+}
+#mode {
+  color: hsl(225, 20%, 60%);
+  left: 100px;
+  bottom: 130px;
+}
+
+.toogle {
+  bottom: 140px;
+  display: flex;
+  position: relative;
+  margin: 0px 0px 0px 140px;
+  padding: 10px;
+  font-size: 9px;
+  color: hsl(225, 20%, 60%);
+
+  font-weight: bold;
+  align-items: center;
+}
+.toogle [type="discount"] {
+  background: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+  border-radius: 13px;
+  height: 20px;
+  padding: 5px 5px;
+
+  margin-left: 9px;
+  font-size: 9px;
+}
+.toogle input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toogle label {
+  display: flex;
+  cursor: pointer;
+  width: 43px;
+  height: 22px;
+  background: hsl(223, 50%, 87%);
+  border-radius: 100px;
+  position: relative;
+
+  margin: 15px;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: hsl(174, 86%, 45%);
+}
+
+input:checked + label:after {
+  left: calc(100% - 9%);
+  transform: translateX(-100%);
+}
+
+.toogle label:active:after {
+  width: 40%;
+}
+
+.footer2 {
+  bottom: 139px;
+  position: relative;
+  padding: 25px 0px 0px 50px;
+  font-weight: bolder;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 230px 220px;
+  grid-gap: 10px;
+  grid-template-rows: 50px 57px;
+  font-size: 10px;
+  border-top: 1px solid hsl(224, 65%, 95%);
+}
+.footer2 text {
+  background-color: hsl(223, 50%, 87%);
+  font-size: 10px;
+}
+.footer2 p {
+  color: hsl(225, 20%, 60%);
+  padding: 5px;
+}
+.footer2 p img {
+  margin-right: 15px;
+}
+.footer2 button {
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(223, 50%, 87%);
+  grid-column: 1/2;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  margin: 20px 10px 0px 0px;
+  cursor: pointer;
+  width: 160px;
+  height: 35px;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* FOOTER END */
+
+button[type="button"]:active {
+  background-color: hsl(228, 26%, 38%);
+  size-adjust: 10px;
+}
